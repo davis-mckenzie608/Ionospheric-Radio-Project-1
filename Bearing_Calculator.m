@@ -1,7 +1,7 @@
-function [TargetHeading,TargetDistance] = Bearing_Calculator(LatDegSrc,LatMinSrc,...
-    LatSecSrc,LatPolSrc,LongDegSrc,LongMinSrc,LongSecSrc,LongPolSrc,...
-    LatDegDest,LatMinDest,LatSecDest,LatPolDest,LongDegDest,LongMinDest,...
-    LongSecDest,LongPolDest)
+function [TargetHeading,TargetDistance] = Bearing_Calculator(LatDegSrc,...
+    LatMinSrc,LatSecSrc,LatPolSrc,LongDegSrc,LongMinSrc,LongSecSrc,...
+    LongPolSrc,LatDegDest,LatMinDest,LatSecDest,LatPolDest,LongDegDest,...
+    LongMinDest,LongSecDest,LongPolDest)
 %BEARING_CALCULATOR Calculates True North Heading from Source to
 %Destination 
 %   Uses Degree, Minute, Second (DMS) valued latitude and longitude for any two
@@ -36,22 +36,32 @@ end
 
 %Converts DMS to signed Decimal Coordinates for Source
 LatSrcDEC = (LatDegSrc + (LatMinSrc + (LatSecSrc/60))/60);
-LongSrcDEC = (LongDegSrc + (LongMinSrc + (LongSecSrc/60)/60));
+LongSrcDEC = (LongDegSrc + (LongMinSrc + (LongSecSrc/60))/60);
 LatSrcDEC = LatSrcDEC*LatPolSrc;
 LongSrcDEC = LongSrcDEC*LongPolSrc;
-Src = [LatSrcDEC,LongSrcDEC];
 
 %Converts DMS to signed Decimal Coordinates for Destination
 LatDestDEC = (LatDegDest + (LatMinDest + (LatSecDest/60))/60);
-LongDestDEC = (LongDegDest + (LongMinDest + (LongSecDest/60)/60));
+LongDestDEC = (LongDegDest + (LongMinDest + (LongSecDest/60))/60);
 LatDestDEC = LatDestDEC*LatPolDest;
 LongDestDEC = LongDestDEC*LongPolDest;
-Dest = [LatDestDEC,LongDestDEC];
 
-ElevDecl = Dest(1) - Src(1);
-Azm = Dest(2) - Src(2);
+lat1 = deg2rad(LatSrcDEC);
+lon1 = deg2rad(LongSrcDEC);
+lat2 = deg2rad(LatDestDEC);
+lon2 = deg2rad(LongDestDEC);
+dLat = lat2 - lat1;
+dLon = lon2 - lon1;
 
-TargetHeading = atan(ElevDecl/Azm);
-TargetDistanceDeg = sqrt(ElevDecl^2 + Azm^2);
-TargetDistance = TargetDistanceDeg * 111; % Convert degrees to km (approx.)
+% Calculate bearing using forward azimuth formula
+x = sin(dLon) * cos(lat2);
+y = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(dLon);
+TargetHeading = rad2deg(atan2(x, y));
+TargetHeading = mod(TargetHeading, 360);
+
+% Calculate distance using Haversine formula
+R = 6371;  % Earth's mean radius in kilometers
+a = sin(dLat/2)^2 + cos(lat1) * cos(lat2) * sin(dLon/2)^2;
+c = 2 * atan2(sqrt(a), sqrt(1-a));
+TargetDistance = R * c;
 end
