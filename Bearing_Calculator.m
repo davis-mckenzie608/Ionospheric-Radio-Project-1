@@ -1,7 +1,5 @@
-function [TargetHeading,TargetDistance] = Bearing_Calculator(LatDegSrc,...
-    LatMinSrc,LatSecSrc,LatPolSrc,LongDegSrc,LongMinSrc,LongSecSrc,...
-    LongPolSrc,LatDegDest,LatMinDest,LatSecDest,LatPolDest,LongDegDest,...
-    LongMinDest,LongSecDest,LongPolDest)
+function [TargetHeading,TargetDistance] = Bearing_Calculator(SourceCoord,...
+    DestCoord)
 %BEARING_CALCULATOR Calculates True North Heading from Source to
 %Destination 
 %   Uses Degree, Minute, Second (DMS) valued latitude and longitude for any two
@@ -11,28 +9,31 @@ function [TargetHeading,TargetDistance] = Bearing_Calculator(LatDegSrc,...
 %   international date line. Distance accuracy will decrease as points move
 %   further from the equator.
 arguments (Input)
-    LatDegSrc %The Degree value of the source latitude
-    LatMinSrc %The Arcminute value of the source latitude
-    LatSecSrc %The Arcsecond value of the source latitude
-    LatPolSrc %The Polarity of source latitude (1=North, -1=South)
-    LongDegSrc %The Degree value of the source longitude
-    LongMinSrc %The Arcminute value of the source longitude
-    LongSecSrc %The Arcsecond value of the source longitude
-    LongPolSrc %The Polarity of source longitude (1=East, -1=West)
-    LatDegDest %The Degree value of the destination latitude
-    LatMinDest %The Arcminute value of the destination latitude
-    LatSecDest %The Arcsecond value of the destination latitude
-    LatPolDest %The Polarity of destination latitude (1=North, -1=South)
-    LongDegDest %The Degree value of the destination longitude
-    LongMinDest %The Arcminute value of the destination longitude
-    LongSecDest %The Arcsecond value of the destination longitude
-    LongPolDest %The Polarity of destination longitude (1=East, -1=West)
+    SourceCoord (1,8)
+    DestCoord (1,8)
 end
 
 arguments (Output)
     TargetHeading
     TargetDistance
 end
+
+LatDegSrc = SourceCoord(1); %The Degree value of the source latitude
+LatMinSrc = SourceCoord(2); %The Arcminute value of the source latitude
+LatSecSrc = SourceCoord(3); %The Arcsecond value of the source latitude
+LatPolSrc = SourceCoord(4); %The Polarity of source latitude (1=North, -1=South)
+LongDegSrc = SourceCoord(5); %The Degree value of the source longitude
+LongMinSrc = SourceCoord(6); %The Arcminute value of the source longitude
+LongSecSrc = SourceCoord(7); %The Arcsecond value of the source longitude
+LongPolSrc = SourceCoord(8); %The Polarity of source longitude (1=East, -1=West)
+LatDegDest = DestCoord(1); %The Degree value of the destination latitude
+LatMinDest = DestCoord(2); %The Arcminute value of the destination latitude
+LatSecDest = DestCoord(3); %The Arcsecond value of the destination latitude
+LatPolDest = DestCoord(4); %The Polarity of destination latitude (1=North, -1=South)
+LongDegDest = DestCoord(5); %The Degree value of the destination longitude
+LongMinDest = DestCoord(6); %The Arcminute value of the destination longitude
+LongSecDest = DestCoord(7); %The Arcsecond value of the destination longitude
+LongPolDest = DestCoord(8); %The Polarity of destination longitude (1=East, -1=West)
 
 %Converts DMS to signed Decimal Coordinates for Source
 LatSrcDEC = (LatDegSrc + (LatMinSrc + (LatSecSrc/60))/60);
