@@ -1,4 +1,4 @@
-function [TargetHeading,TargetDistance] = Bearing_Calculator(SourceCoord,...
+function [TargetHeading,TargetDistance,SourceLat,SourceLong] = Bearing_Calculator(SourceCoord,...
     DestCoord)
 %BEARING_CALCULATOR Calculates True North Heading from Source to
 %Destination 
@@ -16,6 +16,8 @@ end
 arguments (Output)
     TargetHeading
     TargetDistance
+    SourceLat
+    SourceLong
 end
 
 LatDegSrc = SourceCoord(1); %The Degree value of the source latitude
@@ -65,4 +67,7 @@ R = 6371;  % Earth's mean radius in kilometers
 a = sin(dLat/2)^2 + cos(lat1) * cos(lat2) * sin(dLon/2)^2;
 c = 2 * atan2(sqrt(a), sqrt(1-a));
 TargetDistance = R * c;
+
+SourceLat = LatSrcDEC;
+SourceLong = LongSrcDEC;
 end
