@@ -7,4 +7,5 @@ Chesapeake_Site = [36 46 06 1 76 17 13 -1];
 Auburn_Site = [32 36 17 1 85 29 12 -1];
 UT = [2004; 7; 1; 10; 0]; %Time as Year, Month, Day, Hour, Minute
 
-[iono_en_grid, iono_en_grid_5, collison_freq, irreg, iono_te_grid] = Ionospheric_Grid_2D(CorpusChristi_Site,Auburn_Site,UT);
+[iono_en_grid, iono_en_grid_5, collison_freq, irreg, iono_te_grid] =...
+    Ionospheric_Grid_2D(CorpusChristi_Site,Auburn_Site,UT);

@@ -1,4 +1,4 @@
-function [iono_en_grid, iono_en_grid_5, collison_freq, irreg, iono_te_grid] = Ionospheric_Grid_2D(Source_Location,Destination_Location,UT)
+function [iono_en_grid, iono_en_grid_5, collison_freq, iono_te_grid, start_height, height_inc, range_inc, irreg] = Ionospheric_Grid_2D(Source_Location,Destination_Location,UT)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 arguments (Input)
@@ -11,8 +11,11 @@ arguments (Output)
     iono_en_grid
     iono_en_grid_5
     collison_freq
-    irreg
     iono_te_grid
+    start_height
+    height_inc
+    range_inc
+    irreg
 end
 
 kp = 1;
