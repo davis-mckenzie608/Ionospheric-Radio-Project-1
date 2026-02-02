@@ -53,21 +53,29 @@ lat1 = deg2rad(LatSrcDEC);
 lon1 = deg2rad(LongSrcDEC);
 lat2 = deg2rad(LatDestDEC);
 lon2 = deg2rad(LongDestDEC);
-dLat = lat2 - lat1;
-dLon = lon2 - lon1;
+% dLat = lat2 - lat1;
+% dLon = lon2 - lon1;
 
-% Calculate bearing using forward azimuth formula
-x = sin(dLon) * cos(lat2);
-y = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(dLon);
-TargetHeading = rad2deg(atan2(x, y));
-TargetHeading = mod(TargetHeading, 360);
+% % Calculate bearing using forward azimuth formula
+% x = sin(dLon) * cos(lat2);
+% y = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(dLon);
+% TargetHeading = rad2deg(atan2(x, y));
+% TargetHeading = mod(TargetHeading, 360);
+% 
+% % Calculate distance using Haversine formula
+% R = 6371;  % Earth's mean radius in kilometers
+% a = sin(dLat/2)^2 + cos(lat1) * cos(lat2) * sin(dLon/2)^2;
+% c = 2 * atan2(sqrt(a), sqrt(1-a));
+% TargetDistance = R * c;
 
-% Calculate distance using Haversine formula
-R = 6371;  % Earth's mean radius in kilometers
-a = sin(dLat/2)^2 + cos(lat1) * cos(lat2) * sin(dLon/2)^2;
-c = 2 * atan2(sqrt(a), sqrt(1-a));
-TargetDistance = R * c;
+% Create WGS84 reference ellipsoid in kilometers
+wgs84 = wgs84Ellipsoid('kilometer');
 
+% Calculate distance
+[d, az] = distance(lat1, lon1, lat2, lon2, wgs84, 'radians');
+
+TargetHeading = rad2deg(az);
+TargetDistance = d;
 SourceLat = LatSrcDEC;
 SourceLong = LongSrcDEC;
 end
