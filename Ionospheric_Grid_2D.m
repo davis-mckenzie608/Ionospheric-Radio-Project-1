@@ -18,15 +18,15 @@ arguments (Output)
     irreg
 end
 
-kp = 1;
+kp = 0;
 doppler_flag = 1;
-R12 = 64.8;
-num_range = 1000;
-num_heights = 1000;
+R12 = 84.1;
+num_range = 501;
+num_heights = 500;
 max_range = 10000; % maximum group range for data grids (Km) (SEE IMPORTANT NOTE ABOVE)
-start_height = 90; % desired start height of iono_pf_grid & bfield grids (km) (SEE IMPORTANT NOTE ABOVE)
-range_inc = 10; % desired range step of iono_pf_grid, bfield, iono_parms, dec, dip, and irreg_strngth arrays (km) (SEE IMPORTANT NOTE ABOVE)
-height_inc = 1; % desired height step of iono_pf_grid & bfield grids (km) (SEE IMPORTANT NOTE ABOVE)
+start_height = 0; % desired start height of iono_pf_grid & bfield grids (km) (SEE IMPORTANT NOTE ABOVE)
+range_inc = max_range ./ (num_range - 1); % desired range step of iono_pf_grid, bfield, iono_parms, dec, dip, and irreg_strngth arrays (km) (SEE IMPORTANT NOTE ABOVE)
+height_inc = 3; % desired height step of iono_pf_grid & bfield grids (km) (SEE IMPORTANT NOTE ABOVE)
 
 
 [azim, Target_Distance, origin_lat, origin_lon] =...
