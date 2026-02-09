@@ -9,6 +9,11 @@
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
+\usepackage[
+backend=biber,
+style=ieee,
+]{biblatex}
+\addbibresource{bibliography.bib}
  
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -31,34 +36,35 @@
 \begin{document}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhf[EHC]{Davis McKenzie - Signal Generator}
+\fancyhf[EHC]{Davis McKenzie - Ionospheric Radio Project 1}
 \fancyhf[EFC]{\thepage}
 \fancyhf[OFC]{\thepage}
-\fancyhf[OHC]{Davis McKenzie - Signal Generator}
+\fancyhf[OHC]{Davis McKenzie - Ionospheric Radio Project 1}
 % --------------------------------------------------------------
 %                         Start here
 % --------------------------------------------------------------
  
-\title{Signal Generator, Sinusoidal}
+\title{Project 1, Atmospheric Ray Tracing}
 \author{Davis McKenzie\\ %replace with your name
-Analog Electronics}
+Ionospheric Radio}
 
 \maketitle
 
-\noindent The following report formulated for ELEC 3700 - Analog Electronics is laid out as follows:
+\noindent The following report prepared for ELEC 6970 - Special Topics: Ionospheric Radio is Structured as follows:
 
 \begin{enumerate} %the first video is required (but you don't have to watch it first), you can choose the other 4 from the list on the Course Materials page
-\item Project Tasks 
-\item Generator Overview and Component Groups
-\item Final Schematic and Outcome
+\item Project Motivations 
+\item Two-Dimensional Ray Tracing Implementation and Results
+\item Three-Dimensional Ray Tracing Implementation and Results
+\item Further Uses of PHaRLAP and Ray Tracing
 \end{enumerate}
 
 
 
 \newpage
 
-\section*{Project Tasks}
-Design a signal generator capable of producing a sinusoidal output with an amplitude of either 0.1 V or 1 V and a frequency of 5 kHz. The generator must use an op-amp oscillator as the frequency originator.
+\section{Project Motivations}
+The ionosphere plays a large role in long-distance radio propagation, especially in the high-frequency (HF) range. Using the PHaRLAP toolbox available from the Defence Science and Technology Group of the Australian Department of Defence \cite{Cervera_2024}, the behavior of individual propagating rays may be studied. Apart from studying HF propagation, this tool can also be used to learn about how real-world systems, such as ionosondes, make measurements. By extracting useful information such as the maximum height reached by rays and their path data, characteristics of the ionosphere may be deduced in a manner similar to how functional instruments make these determinations.
 
 
 
@@ -66,7 +72,7 @@ Design a signal generator capable of producing a sinusoidal output with an ampli
 %     You don't have to mess with anything below this line.
 % --------------------------------------------------------------
 
-\section*{Generator Overview and Component Groups}
+\section{Two Dimensional Ray Tracing Implementation and Results}
 \subsection{Block Diagram}
 Shown below is the block diagram outlining the general construction of the signal generator. Subsystems are shown below in the block diagram and are also highlighted in the final schematic.
 \begin{figure}[h!] 
@@ -134,7 +140,7 @@ Using these equations and a suitable frequency, the following component values w
 \end{equation*}
 
 \newpage
-\section*{Final Schematic and Outcome}
+\section{Three-Dimensional Ray Tracing Implementation and Results}
 Each component subsystem was then combined and the resulting completed signal generator is shown below.
 
 \begin{figure}[h!] 
@@ -169,8 +175,9 @@ The output of the signal generator appears to be a relatively pure sinusoid acco
 
 Overall, the output of the signal generator is clean and accurate. However, there are minor discrepancies in the expected vs. observed amplitudes. This could be improved in revisions of this design.
 
+\section{Further Uses of PHaRLAP and Ray Tracing}
 
 
 
-
+\printbibliography
 \end{document}

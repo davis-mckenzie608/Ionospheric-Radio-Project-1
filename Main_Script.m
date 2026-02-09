@@ -6,7 +6,7 @@ Chesapeake_Site = [36 46 06 1 76 17 13 -1];
 Auburn_Site = [32 36 17 1 85 29 12 -1];
 UT = [2004 7 1 10 0]; %Time as Year, Month, Day, Hour, Minute
 
-Site_Selector = 2; % Set to 1 for Chesapeake, Set to 2 For Corpus Christi
+Site_Selector = 1; % Set to 1 for Chesapeake, Set to 2 For Corpus Christi
 
 if Site_Selector ==1
     Source_Site = Chesapeake_Site;
@@ -45,7 +45,7 @@ iono_en_grid_5 = iono_pf_grid_5.^2 / 80.6164e-6;
 
 %Loop Using Already Initialized Ionospheric Model
 elevs = 1:0.05:90;
-frequencies = 1:0.01:15;  % 1 to 15 MHz
+frequencies = 1:0.1:20;  % 1 to 15 MHz
 
 Closest_Apogee = zeros(size(frequencies));
 Closest_Distance = zeros(size(frequencies));
@@ -123,12 +123,12 @@ Calc_Height_Phase = Calc_Height_Phase - s_mat;
 Calc_Height_Geo = Calc_Height_Geo - s_mat;
 
 %% Plot
-figure;
+fig = figure;
 hold on;
 
-scatter(frequencies, Closest_Apogee, 'DisplayName', 'Ray Trace Apogee');
-scatter(frequencies, real(Calc_Height_Group), 'DisplayName', 'Calculated Height (Group Path)');
-scatter(frequencies, real(Calc_Height_Geo), 'DisplayName', 'Calculated Height (Geometric Path)');
+p{1} = scatter(frequencies, Closest_Apogee, 'DisplayName', 'Ray Trace Apogee');
+p{2} = scatter(frequencies, real(Calc_Height_Group), 'DisplayName', 'Calculated Height (Group Path)');
+p{3} = scatter(frequencies, real(Calc_Height_Geo), 'DisplayName', 'Calculated Height (Geometric Path)');
 
 hold off;
 
@@ -140,7 +140,7 @@ xlim([0 max(frequencies)]);
 ylim([0 400]);
 
 % Format date and time string
-date_str = sprintf('%04d-%02d-%02d %02d:%02d UT', UT(1), UT(2), UT(3), UT(4), UT(5));
+date_str = sprintf('%04d-%02d-%02d %02d:%02d UTC', UT(1), UT(2), UT(3), UT(4), UT(5));
 
 % Set title with site info and date/time
 if Site_Selector == 1
@@ -149,3 +149,6 @@ else
     title_str = sprintf('Ionospheric Reflection Height vs Frequency\nCorpus Christi to Auburn at %s', date_str);
 end
 title(title_str);
+ax = gca;
+lgd = legend;
+IEEE_Format_Plot_v2('figure', fig, 'whr', 1, 'scale', 2, 'curve', p, 'axis', ax, 'legend', lgd);
