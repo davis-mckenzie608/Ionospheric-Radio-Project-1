@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.9)  9 FEB 2026 13:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.9)  9 FEB 2026 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -609,12 +609,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {C:/Users/davis/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<img/Screenshot 2024-12-04 030231.png, id=7, 697.8572pt x 313.9228pt>
-File: img/Screenshot 2024-12-04 030231.png Graphic file (type png)
-<use img/Screenshot 2024-12-04 030231.png>
-Package pdftex.def Info: img/Screenshot 2024-12-04 030231.png  used on input li
-ne 80.
-(pdftex.def)             Requested size: 325.215pt x 146.29352pt.
+<img/Raytrace_ex.png, id=7, 1200.1638pt x 289.5618pt>
+File: img/Raytrace_ex.png Graphic file (type png)
+<use img/Raytrace_ex.png>
+Package pdftex.def Info: img/Raytrace_ex.png  used on input line 74.
+(pdftex.def)             Requested size: 469.75499pt x 113.33513pt.
+
+Overfull \hbox (2.66907pt too wide) in paragraph at lines 79--80
+\OT1/cmr/m/n/12 ing and dis-tance be-tween two co-or-di-nate points and Earth w
+as cre-ated, [][]\OT1/cmtt/m/n/12 Bearing_Calculator[]\OT1/cmr/m/n/12 .
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -623,39 +627,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[2 <./img/Screenshot 2024-12-04 030231.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[3]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[4]
-Overfull \hbox (0.6727pt too wide) in paragraph at lines 143--143
+[2 <./img/Raytrace_ex.png (PNG copy)>]
+Overfull \hbox (0.6727pt too wide) in paragraph at lines 89--89
 []\OT1/cmr/bx/n/17.28 Three-Dimensional Ray Trac-ing Im-ple-men-ta-tion and
  []
 
-<img/Signal Generator Schematic.png, id=26, 782.42313pt x 261.47687pt>
-File: img/Signal Generator Schematic.png Graphic file (type png)
-<use img/Signal Generator Schematic.png>
-Package pdftex.def Info: img/Signal Generator Schematic.png  used on input line
- 148.
-(pdftex.def)             Requested size: 469.75499pt x 156.98708pt.
-<img/Screenshot 2024-12-04 045412.png, id=27, 1924.94156pt x 992.20688pt>
-File: img/Screenshot 2024-12-04 045412.png Graphic file (type png)
-<use img/Screenshot 2024-12-04 045412.png>
-Package pdftex.def Info: img/Screenshot 2024-12-04 045412.png  used on input li
-ne 156.
-(pdftex.def)             Requested size: 433.62pt x 223.50943pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -663,42 +639,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5 <./img/Signal Generator Schematic.png> <./img/Screenshot 2024-12-04 045412.p
-ng>]
-<img/Screenshot 2024-12-04 045341.png, id=33, 1921.93031pt x 993.7125pt>
-File: img/Screenshot 2024-12-04 045341.png Graphic file (type png)
-<use img/Screenshot 2024-12-04 045341.png>
-Package pdftex.def Info: img/Screenshot 2024-12-04 045341.png  used on input li
-ne 162.
-(pdftex.def)             Requested size: 433.62pt x 224.19734pt.
-<img/Screenshot 2024-12-04 045933.png, id=34, 1908.37968pt x 989.19562pt>
-File: img/Screenshot 2024-12-04 045933.png Graphic file (type png)
-<use img/Screenshot 2024-12-04 045933.png>
-Package pdftex.def Info: img/Screenshot 2024-12-04 045933.png  used on input li
-ne 169.
-(pdftex.def)             Requested size: 433.62pt x 224.76312pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--175
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[6 <./img/Screenshot 2024-12-04 045341.png> <./img/Screenshot 2024-12-04 045933
-.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[7] (main.aux)
+[3] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -712,29 +653,22 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11856 strings out of 467866
- 219603 string characters out of 5418326
- 1054935 words of memory out of 5000000
- 40627 multiletter control sequences out of 15000+600000
+ 11827 strings out of 467866
+ 218251 string characters out of 5418326
+ 1053958 words of memory out of 5000000
+ 40598 multiletter control sequences out of 15000+600000
  636693 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,66p,752b,1272s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 63i,11n,66p,899b,1321s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmex10.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmmi12.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/davis/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/davis/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/davis/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/davis/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/d
-avis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
-:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti
-12.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmtt12.pfb>
-Output written on main.pdf (7 pages, 534763 bytes).
+fonts/cm/cmr12.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr17.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmti12.pfb><C:/Users/davis/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (3 pages, 418078 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 38 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
