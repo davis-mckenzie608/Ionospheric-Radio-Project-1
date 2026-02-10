@@ -7,6 +7,7 @@ Auburn_Site = [32 36 17 1 85 29 12 -1];
 UT = [2004 7 1 10 0]; %Time as Year, Month, Day, Hour, Minute
 
 Site_Selector = 1; % Set to 1 for Chesapeake, Set to 2 For Corpus Christi
+Simulation_Selector = 2; %Set to 1 for 2D Simulation, 2 For 3D Simulation
 
 if Site_Selector ==1
     Source_Site = Chesapeake_Site;
@@ -15,6 +16,7 @@ if Site_Selector ==2
     Source_Site = CorpusChristi_Site;
 end
 
+if Simulation_Selector ==1;
 %Generate the Ionospheric Grid
 [iono_pf_grid, iono_pf_grid_5, collision_freq, iono_te_grid, start_height,...
     height_inc, range_inc, irreg] = Ionospheric_Grid_2D(Source_Site,...
@@ -152,3 +154,90 @@ title(title_str);
 ax = gca;
 lgd = legend;
 IEEE_Format_Plot_v2('figure', fig, 'whr', 1, 'scale', 2, 'curve', p, 'axis', ax, 'legend', lgd);
+end
+
+if Simulation_Selector == 2;
+% Constants
+origin_ht = 0.0;
+
+% Calculate Targeting Information
+[azim, Target_Distance, origin_lat, origin_long] =...
+    Bearing_Calculator(Source_Site,Auburn_Site);
+% Generate the Ionospheric Parameters
+[iono_pf_grid,iono_pf_grid_5, collision_freq, Bx, By, Bz, iono_grid_parms,...
+    geomag_grid_parms] = Ionospheric_Grid_3D(UT);
+% Initialize Ionospheric Model
+elevs_init = 20;
+freq_init = 5;
+freqs_init = freq_init.*ones(size(elevs_init));
+ray_bears = ones(size(elevs_init)); % initial bearing of rays
+ray_bears = ray_bears.*azim;
+OX_mode = 1;
+nhops = 1;
+tol = [1e-7 0.01 25];  
+% convert plasma frequency grid to  electron density in electrons/cm^3
+iono_en_grid = iono_pf_grid.^2 / 80.6164e-6;
+iono_en_grid_5 = iono_pf_grid_5.^2 / 80.6164e-6;
+
+[ray_data, ray_path_data, ray_state_vec] = ...
+            raytrace_3d(origin_lat, origin_long, origin_ht, elevs_init, ray_bears,...
+                        freqs_init, OX_mode, nhops, tol, iono_en_grid, ...
+     	                iono_en_grid_5, collision_freq, iono_grid_parms, ...
+                        Bx, By, Bz, geomag_grid_parms);
+% Loop Using Already Initialized Ionospheric Model
+elevs = 1:0.05:90;
+freqs = 1:0.1:20;  % 1 to 15 MHz
+freqs = freqs.*ones(size(elevs));
+ray_bears = ones(size(elevs)); % initial bearing of rays
+ray_bears = ray_bears.*azim;
+OX_mode = 1;
+nhops = 1;
+tol = [1e-7 0.01 25];  
+
+for i = 1:length(frequencies)
+    freq = frequencies(i);
+    freqs = freq .* ones(size(elevs));
+    [ray_data, ray_path_data, ray_state_vec] = ...
+            raytrace_3d(origin_lat, origin_long, origin_ht, elevs, ray_bearings,...
+                        freqs, OX_mode, nhops, tol);
+    
+    % Extract arrays
+    ray_labels = [ray_data.ray_label];
+    ground_ranges = [ray_data.ground_range];
+    apogees = [ray_data.apogee];
+    group_ranges = [ray_data.group_range];
+    phase_paths = [ray_data.phase_path];
+    geometric_path_lengths = [ray_data.geometric_path_length];
+
+    
+    % Filter Indices
+    valid_idx = (ray_labels == 1) & (abs(ground_ranges - Target_Distance) <= max_distance_error);
+    
+    if any(valid_idx)
+        % Filter to only valid data
+        valid_ranges = ground_ranges(valid_idx);
+        valid_apogees = apogees(valid_idx);
+        valid_group_ranges = group_ranges(valid_idx);
+        valid_phase_paths = phase_paths(valid_idx);
+        valid_geometric_path_lengths = geometric_path_lengths(valid_idx);
+        
+        % Find closest distance among valid points
+        [~, idx] = min(abs(valid_ranges - Target_Distance));
+        
+        % Store results
+        Closest_Apogee(i) = valid_apogees(idx);
+        Closest_Distance(i) = valid_ranges(idx);
+        closest_group_range(i) = valid_group_ranges(idx);
+        closest_phase_path(i) = valid_phase_paths(idx);
+        closest_geometric_path_length(i) = valid_geometric_path_lengths(idx);
+    else
+        % No valid rays for this frequency
+        Closest_Apogee(i) = NaN;
+        Closest_Distance(i) = NaN;
+        closest_group_range(i) = NaN;
+        closest_phase_path(i) = NaN;
+        closest_geometric_path_length(i) = NaN;
+    end
+    break
+end
+end    
