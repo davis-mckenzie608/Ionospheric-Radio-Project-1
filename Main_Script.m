@@ -1,13 +1,16 @@
 %ELEC 6970 - Ionospheric Radio: Project 1
 %JDM 0206 - Spring 2026
 %Ray Tracing
+
+tic 
+
 CorpusChristi_Site = [27 47 45 1 97 24 14 -1];
 Chesapeake_Site = [36 46 06 1 76 17 13 -1];
 Auburn_Site = [32 36 17 1 85 29 12 -1];
 UT = [2004 7 1 10 0]; %Time as Year, Month, Day, Hour, Minute
 
 Site_Selector = 1; % Set to 1 for Chesapeake, Set to 2 For Corpus Christi
-Simulation_Selector = 3; %Set to 1 for 2D Simulation, 2 For 3D Simulation, 3 for Chesapeake Anisotropy, 4 for Corpus Christi Anisotropy
+Simulation_Selector = 2; %Set to 1 for 2D Simulation, 2 For 3D Simulation, 3 for Chesapeake Anisotropy, 4 for Corpus Christi Anisotropy
 
 if Site_Selector ==1
     Source_Site = Chesapeake_Site;
@@ -54,8 +57,10 @@ Closest_Distance = zeros(size(frequencies));
 closest_group_range = zeros(size(frequencies));
 closest_phase_path = zeros(size(frequencies));
 closest_geometric_path_length = zeros(size(frequencies));
+closest_lats = zeros(size(frequencies));
+closest_lons = zeros(size(frequencies));
 
-max_distance_error = 30;  % km
+max_distance_error = 5;  % km
 
 for i = 1:length(frequencies)
     freq = frequencies(i);
@@ -71,6 +76,8 @@ for i = 1:length(frequencies)
     group_ranges = [ray_data.group_range];
     phase_paths = [ray_data.phase_path];
     geometric_path_lengths = [ray_data.geometric_path_length];
+    lats = [ray_data.lat];
+    lons = [ray_data.lon];
 
     
     % Filter Indices
@@ -83,6 +90,8 @@ for i = 1:length(frequencies)
         valid_group_ranges = group_ranges(valid_idx);
         valid_phase_paths = phase_paths(valid_idx);
         valid_geometric_path_lengths = geometric_path_lengths(valid_idx);
+        valid_lats = lats(valid_idx);
+        valid_lons = lons(valid_idx);
         
         % Find closest distance among valid points
         [~, idx] = min(abs(valid_ranges - Target_Distance));
@@ -93,6 +102,8 @@ for i = 1:length(frequencies)
         closest_group_range(i) = valid_group_ranges(idx);
         closest_phase_path(i) = valid_phase_paths(idx);
         closest_geometric_path_length(i) = valid_geometric_path_lengths(idx);
+        closest_lats(i) = valid_lats(idx);
+        closest_lons(i) = valid_lons(idx);
     else
         % No valid rays for this frequency
         Closest_Apogee(i) = NaN;
@@ -100,6 +111,8 @@ for i = 1:length(frequencies)
         closest_group_range(i) = NaN;
         closest_phase_path(i) = NaN;
         closest_geometric_path_length(i) = NaN;
+        closest_lats(i) = NaN;
+        closest_lons(i) = NaN;
     end
 end
 
@@ -131,6 +144,7 @@ hold on;
 p{1} = scatter(frequencies, Closest_Apogee, 'DisplayName', 'Ray Trace Apogee');
 p{2} = scatter(frequencies, real(Calc_Height_Group), 'DisplayName', 'Calculated Height (Group Path)');
 p{3} = scatter(frequencies, real(Calc_Height_Geo), 'DisplayName', 'Calculated Height (Geometric Path)');
+%p{4} = geoscatter(closest_lats,closest_lons,[],"m","d");
 
 hold off;
 
@@ -154,6 +168,35 @@ title(title_str);
 ax = gca;
 lgd = legend;
 IEEE_Format_Plot_v2('figure', fig, 'whr', 1, 'scale', 2, 'curve', p, 'axis', ax, 'legend', lgd);
+
+ 
+geo1 = figure;
+
+geoscatter(closest_lats,closest_lons,[],"blue","x");
+
+
+hold on;
+geoscatter(32.604722, 360-85.486667,[],"red","x");
+hold off;
+if Site_Selector == 1 %Chesapeake Title
+    title(sprintf('Landing Point of Traced Rays from\nChesapeake, VA to Auburn, AL at %s', date_str));
+else
+    title(sprintf('Landing Point of Traced Rays from\nCorpus Christi, TX to Auburn, AL at %s', date_str));
+end
+legend('Ray Landing Points','Broun Hall','Location','best');
+gx = gca; 
+gx.LongitudeLabel.FontSize = 18; 
+gx.LatitudeLabel.FontSize = 18;
+gx.Title.FontSize = 18;
+gx.FontName = 'Times New Roman';
+gx.MapCenter = [32.604722, 360-85.486667];
+gx.Basemap = 'topographic';
+gx.GridLineStyle = '--';
+gx.GridAlpha = 0.4;
+gx.Legend.FontSize = 12;
+
+
+
 end
 
 if Simulation_Selector == 2;
@@ -195,13 +238,15 @@ Closest_Distance_O = zeros(size(frequencies));
 closest_group_range_O = zeros(size(frequencies));
 closest_phase_path_O = zeros(size(frequencies));
 closest_geometric_path_length_O = zeros(size(frequencies));
+closest_lats_O = zeros(size(frequencies));
+closest_lons_O = zeros(size(frequencies));
 
 ray_bears = ones(size(elevs)); % initial bearing of rays
 ray_bears = ray_bears.*azim;
 OX_mode = 1;
 nhops = 1;
 tol = [1e-7 0.01 25];  
-max_distance_error = 100; % Max distance ray i allowed to miss target by (in km)
+max_distance_error = 3; % Max distance ray i allowed to miss target by (in km)
 
 for i = 1:length(frequencies)
     freq = frequencies(i);
@@ -217,6 +262,8 @@ for i = 1:length(frequencies)
     group_ranges = [ray_data.group_range];
     phase_paths = [ray_data.phase_path];
     geometric_path_lengths = [ray_data.geometric_path_length];
+    lats_O = [ray_data.lat];
+    lons_O = [ray_data.lon];
 
     
     % Filter Indices
@@ -229,6 +276,8 @@ for i = 1:length(frequencies)
         valid_group_ranges = group_ranges(valid_idx);
         valid_phase_paths = phase_paths(valid_idx);
         valid_geometric_path_lengths = geometric_path_lengths(valid_idx);
+        valid_lats_O = lats_O(valid_idx);
+        valid_lons_O = lons_O(valid_idx);
         
         % Find closest distance among valid points
         [~, idx] = min(abs(valid_ranges - Target_Distance));
@@ -239,6 +288,8 @@ for i = 1:length(frequencies)
         closest_group_range_O(i) = valid_group_ranges(idx);
         closest_phase_path_O(i) = valid_phase_paths(idx);
         closest_geometric_path_length_O(i) = valid_geometric_path_lengths(idx);
+        closest_lats_O(i) = valid_lats_O(idx);
+        closest_lons_O(i) = valid_lons_O(idx);
     else
         % No valid rays for this frequency
         Closest_Apogee_O(i) = NaN;
@@ -246,6 +297,8 @@ for i = 1:length(frequencies)
         closest_group_range_O(i) = NaN;
         closest_phase_path_O(i) = NaN;
         closest_geometric_path_length_O(i) = NaN;
+        closest_lats_O(i) = NaN;
+        closest_lons_O(i) = NaN;
     end
 end
 %% X-Mode Virtual Heights
@@ -259,13 +312,15 @@ Closest_Distance_X = zeros(size(frequencies));
 closest_group_range_X = zeros(size(frequencies));
 closest_phase_path_X = zeros(size(frequencies));
 closest_geometric_path_length_X = zeros(size(frequencies));
+closest_lats_X = zeros(size(frequencies));
+closest_lons_X = zeros(size(frequencies));
 
 ray_bears = ones(size(elevs)); % initial bearing of rays
 ray_bears = ray_bears.*azim;
 OX_mode = -1;
 nhops = 1;
 tol = [1e-7 0.01 25];  
-max_distance_error = 100; % Max distance ray i allowed to miss target by (in km)
+max_distance_error = 3; % Max distance ray i allowed to miss target by (in km)
 
 for i = 1:length(frequencies)
     freq = frequencies(i);
@@ -281,6 +336,8 @@ for i = 1:length(frequencies)
     group_ranges = [ray_data.group_range];
     phase_paths = [ray_data.phase_path];
     geometric_path_lengths = [ray_data.geometric_path_length];
+    lats_X = [ray_data.lat];
+    lons_X = [ray_data.lon];
 
     
     % Filter Indices
@@ -293,6 +350,8 @@ for i = 1:length(frequencies)
         valid_group_ranges = group_ranges(valid_idx);
         valid_phase_paths = phase_paths(valid_idx);
         valid_geometric_path_lengths = geometric_path_lengths(valid_idx);
+        valid_lats_X = lats_X(valid_idx);
+        valid_lons_X = lons_X(valid_idx);
         
         % Find closest distance among valid points
         [~, idx] = min(abs(valid_ranges - Target_Distance));
@@ -303,6 +362,8 @@ for i = 1:length(frequencies)
         closest_group_range_X(i) = valid_group_ranges(idx);
         closest_phase_path_X(i) = valid_phase_paths(idx);
         closest_geometric_path_length_X(i) = valid_geometric_path_lengths(idx);
+        closest_lats_X(i) = valid_lats_X(idx);
+        closest_lons_X(i) = valid_lons_X(idx);
     else
         % No valid rays for this frequency
         Closest_Apogee_X(i) = NaN;
@@ -310,6 +371,8 @@ for i = 1:length(frequencies)
         closest_group_range_X(i) = NaN;
         closest_phase_path_X(i) = NaN;
         closest_geometric_path_length_X(i) = NaN;
+        closest_lats_X(i) = NaN;
+        closest_lons_X(i) = NaN;
     end
 end
 % Calculate The Chord Length from Ground Distance (Straight-Line Distance)
@@ -362,6 +425,7 @@ grid on;
 xlim([0 max(frequencies)]);
 ylim([0 400]);
 
+
 % Format date and time string
 date_str = sprintf('%04d-%02d-%02d %02d:%02d UTC', UT(1), UT(2), UT(3), UT(4), UT(5));
 
@@ -375,6 +439,34 @@ title(title_str);
 ax2 = gca;
 lgd2 = legend;
 IEEE_Format_Plot_v2('figure', fig2, 'whr', 1, 'scale', 2, 'curve', p2, 'axis', ax2, 'legend', lgd2);
+
+ThreeD_lats = [closest_lats_X closest_lats_O];
+ThreeD_lons = [closest_lons_X closest_lons_O];
+
+geo2 = figure;
+geoscatter(ThreeD_lats,ThreeD_lons,[],"blue","x");
+
+
+hold on;
+geoscatter(32.604722, -85.486667,[],"red","o","filled");
+hold off;
+if Site_Selector == 1 %Chesapeake Title
+    title(sprintf('Landing Point of Traced Rays from\nChesapeake, VA to Auburn, AL at %s', date_str));
+else
+    title(sprintf('Landing Point of Traced Rays from\nCorpus Christi, TX to Auburn, AL at %s', date_str));
+end
+legend('Ray Landing Points','Broun Hall','Location','best');
+gx = gca; 
+gx.LongitudeLabel.FontSize = 18; 
+gx.LatitudeLabel.FontSize = 18;
+gx.Title.FontSize = 18;
+gx.FontName = 'Times New Roman';
+gx.MapCenter = [32.604722, -85.486667];
+gx.Basemap = 'topographic';
+gx.GridLineStyle = '--';
+gx.GridAlpha = 0.4;
+gx.Legend.FontSize = 12;
+gx.ZoomLevel = 13;
 end    
 if Simulation_Selector==3
 % Analyze Anisotropy for Chesapeake, VA and Auburn, AL
@@ -751,7 +843,63 @@ Calc_Height_Group_X_Reverse = Calc_Height_Group_X_Reverse - s_mat;
 Calc_Height_Phase_X_Reverse = Calc_Height_Phase_X_Reverse - s_mat;
 Calc_Height_Geo_X_Reverse = Calc_Height_Geo_X_Reverse - s_mat;
 
+
+% Plot
+fig3 = figure;
+hold on;
+
+p3{1} = scatter(frequencies, Calc_Height_Geo_X_True, 'DisplayName', 'Calculated X-Mode Reflection Height (Chesapeake -> Auburn)');
+p3{2} = scatter(frequencies, Calc_Height_Geo_X_Reverse, 'DisplayName', 'Calculated X-Mode Reflection Height (Auburn -> Chesapeake)');
+
+hold off;
+
+xlabel('Frequency (MHz)');
+ylabel('Height (km)');
+legend('Location', 'best');
+grid on;
+xlim([0 max(frequencies)]);
+ylim([0 400]);
+
+% Format date and time string
+date_str = sprintf('%04d-%02d-%02d %02d:%02d UTC', UT(1), UT(2), UT(3), UT(4), UT(5));
+
+% Set title with site info and date/time
+
+    title_str = sprintf('Anisotropy Analysis\nAuburn <-> Chesapeake at %s', date_str);
+
+title(title_str);
+ax3 = gca;
+lgd3 = legend;
+IEEE_Format_Plot_v2('figure', fig3, 'whr', 1, 'scale', 2, 'curve', p3, 'axis', ax3, 'legend', lgd3);
+
+fig4 = figure;
+hold on;
+
+p4{1} = scatter(frequencies, Calc_Height_Geo_O_True, 'DisplayName', 'Calculated O-Mode Reflection Height (Chesapeake -> Auburn)');
+p4{2} = scatter(frequencies, Calc_Height_Geo_O_Reverse, 'DisplayName', 'Calculated O-Mode Reflection Height (Auburn -> Chesapeake)');
+
+hold off;
+
+xlabel('Frequency (MHz)');
+ylabel('Height (km)');
+legend('Location', 'best');
+grid on;
+xlim([0 max(frequencies)]);
+ylim([0 400]);
+
+% Format date and time string
+date_str = sprintf('%04d-%02d-%02d %02d:%02d UTC', UT(1), UT(2), UT(3), UT(4), UT(5));
+
+% Set title with site info and date/time
+
+    title_str = sprintf('Anisotropy Analysis\nAuburn <-> Chesapeake at %s', date_str);
+
+title(title_str);
+ax4 = gca;
+lgd4 = legend;
+IEEE_Format_Plot_v2('figure', fig4, 'whr', 1, 'scale', 2, 'curve', p4, 'axis', ax4, 'legend', lgd4);
 end
+
 if Simulation_Selector==4
 % Analyze Anisotropy for Corpus Christi, TX and Auburn, AL
 % Constants
@@ -1126,4 +1274,61 @@ Calc_Height_Geo_X_Reverse = sqrt((closest_geometric_path_length_X.^2 - Chord_Len
 Calc_Height_Group_X_Reverse = Calc_Height_Group_X_Reverse - s_mat;
 Calc_Height_Phase_X_Reverse = Calc_Height_Phase_X_Reverse - s_mat;
 Calc_Height_Geo_X_Reverse = Calc_Height_Geo_X_Reverse - s_mat;
+
+% Plot
+fig5 = figure;
+hold on;
+
+p5{1} = scatter(frequencies, Calc_Height_Geo_X_True, 'DisplayName', 'Calculated X-Mode Reflection Height (Corpus Christi -> Auburn)');
+p5{2} = scatter(frequencies, Calc_Height_Geo_X_Reverse, 'DisplayName', 'Calculated X-Mode Reflection Height (Auburn -> Corpus Christi)');
+
+hold off;
+
+xlabel('Frequency (MHz)');
+ylabel('Height (km)');
+legend('Location', 'best');
+grid on;
+xlim([0 max(frequencies)]);
+ylim([0 400]);
+
+% Format date and time string
+date_str = sprintf('%04d-%02d-%02d %02d:%02d UTC', UT(1), UT(2), UT(3), UT(4), UT(5));
+
+% Set title with site info and date/time
+
+    title_str = sprintf('Anisotropy Analysis\nAuburn <-> Corpus Chrsti at %s', date_str);
+
+title(title_str);
+ax5 = gca;
+lgd5 = legend;
+IEEE_Format_Plot_v2('figure', fig5, 'whr', 1, 'scale', 2, 'curve', p5, 'axis', ax5, 'legend', lgd5);
+
+fig6 = figure;
+hold on;
+
+p6{1} = scatter(frequencies, Calc_Height_Geo_O_True, 'DisplayName', 'Calculated O-Mode Reflection Height (Corpus Christi -> Auburn)');
+p6{2} = scatter(frequencies, Calc_Height_Geo_O_Reverse, 'DisplayName', 'Calculated O-Mode Reflection Height (Auburn -> Corpus Christi)');
+
+hold off;
+
+xlabel('Frequency (MHz)');
+ylabel('Height (km)');
+legend('Location', 'best');
+grid on;
+xlim([0 max(frequencies)]);
+ylim([0 400]);
+
+% Format date and time string
+date_str = sprintf('%04d-%02d-%02d %02d:%02d UTC', UT(1), UT(2), UT(3), UT(4), UT(5));
+
+% Set title with site info and date/time
+
+    title_str = sprintf('Anisotropy Analysis\nAuburn <-> Corpus Christi at %s', date_str);
+
+title(title_str);
+ax6 = gca;
+lgd6 = legend;
+IEEE_Format_Plot_v2('figure', fig6, 'whr', 1, 'scale', 2, 'curve', p6, 'axis', ax6, 'legend', lgd6);
 end
+
+toc
