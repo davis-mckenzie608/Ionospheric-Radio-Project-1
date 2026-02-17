@@ -9,7 +9,7 @@ Chesapeake_Site = [36 46 06 1 76 17 13 -1];
 Auburn_Site = [32 36 17 1 85 29 12 -1];
 UT = [2004 7 1 10 0]; %Time as Year, Month, Day, Hour, Minute
 
-Site_Selector = 1; % Set to 1 for Chesapeake, Set to 2 For Corpus Christi
+Site_Selector = 2; % Set to 1 for Chesapeake, Set to 2 For Corpus Christi
 Simulation_Selector = 2; %Set to 1 for 2D Simulation, 2 For 3D Simulation, 3 for Chesapeake Anisotropy, 4 for Corpus Christi Anisotropy
 
 if Site_Selector ==1
@@ -144,7 +144,6 @@ hold on;
 p{1} = scatter(frequencies, Closest_Apogee, 'DisplayName', 'Ray Trace Apogee');
 p{2} = scatter(frequencies, real(Calc_Height_Group), 'DisplayName', 'Calculated Height (Group Path)');
 p{3} = scatter(frequencies, real(Calc_Height_Geo), 'DisplayName', 'Calculated Height (Geometric Path)');
-%p{4} = geoscatter(closest_lats,closest_lons,[],"m","d");
 
 hold off;
 
@@ -176,7 +175,7 @@ geoscatter(closest_lats,closest_lons,[],"blue","x");
 
 
 hold on;
-geoscatter(32.604722, 360-85.486667,[],"red","x");
+geoscatter(32.604722, 360-85.486667,[],"red","o","filled");
 hold off;
 if Site_Selector == 1 %Chesapeake Title
     title(sprintf('Landing Point of Traced Rays from\nChesapeake, VA to Auburn, AL at %s', date_str));
@@ -408,13 +407,12 @@ Calc_Height_Phase_X = Calc_Height_Phase_X - s_mat;
 Calc_Height_Geo_X = Calc_Height_Geo_X - s_mat;
 
 % Plot
-fig2 = figure;
+fig2a = figure;
 hold on;
 
-p2{1} = scatter(frequencies, Closest_Apogee_O, 'DisplayName', 'Ray Trace Apogee (O-Mode)');
-p2{2} = scatter(frequencies, Closest_Apogee_X, 'DisplayName', 'Ray Trace Apogee (X-Mode)');
-p2{3} = scatter(frequencies, real(Calc_Height_Geo_O), 'DisplayName', 'Calculated Height (Geometric Path, O-Mode)');
-p2{4} = scatter(frequencies, real(Calc_Height_Geo_X), 'DisplayName', 'Calculated Height (Geometric Path, X-Mode)');
+p2a{1} = scatter(frequencies, Closest_Apogee_O, 'DisplayName', 'Ray Trace Apogee (O-Mode)');
+p2a{2} = scatter(frequencies, Closest_Apogee_X, 'DisplayName', 'Ray Trace Apogee (X-Mode)');
+
 
 hold off;
 
@@ -436,15 +434,47 @@ else
     title_str = sprintf('Ionospheric Reflection Height vs Frequency\nCorpus Christi to Auburn at %s', date_str);
 end
 title(title_str);
-ax2 = gca;
-lgd2 = legend;
-IEEE_Format_Plot_v2('figure', fig2, 'whr', 1, 'scale', 2, 'curve', p2, 'axis', ax2, 'legend', lgd2);
+ax2b = gca;
+lgd2b = legend;
+IEEE_Format_Plot_v2('figure', fig2a, 'whr', 1, 'scale', 2, 'curve', p2a, 'axis', ax2b, 'legend', lgd2b);
+
+fig2b = figure;
+hold on;
+
+p2a{1} = scatter(frequencies, real(Calc_Height_Geo_O), 'DisplayName', 'Calculated Height (Geometric Path, O-Mode)');
+p2a{2} = scatter(frequencies, real(Calc_Height_Geo_X), 'DisplayName', 'Calculated Height (Geometric Path, X-Mode)');
+
+hold off;
+
+xlabel('Frequency (MHz)');
+ylabel('Height (km)');
+legend('Location', 'best');
+grid on;
+xlim([0 max(frequencies)]);
+ylim([0 400]);
+
+% Format date and time string
+date_str = sprintf('%04d-%02d-%02d %02d:%02d UTC', UT(1), UT(2), UT(3), UT(4), UT(5));
+
+% Set title with site info and date/time
+if Site_Selector == 1
+    title_str = sprintf('Ionospheric Reflection Height vs Frequency\nChesapeake to Auburn at %s', date_str);
+else
+    title_str = sprintf('Ionospheric Reflection Height vs Frequency\nCorpus Christi to Auburn at %s', date_str);
+end
+title(title_str);
+ax2b = gca;
+lgd2b = legend;
+IEEE_Format_Plot_v2('figure', fig2a, 'whr', 1, 'scale', 2, 'curve', p2a, 'axis', ax2b, 'legend', lgd2b);
+
 
 ThreeD_lats = [closest_lats_X closest_lats_O];
 ThreeD_lons = [closest_lons_X closest_lons_O];
 
 geo2 = figure;
 geoscatter(ThreeD_lats,ThreeD_lons,[],"blue","x");
+
+
 
 
 hold on;
@@ -468,6 +498,9 @@ gx.GridAlpha = 0.4;
 gx.Legend.FontSize = 12;
 gx.ZoomLevel = 13;
 end    
+
+
+
 if Simulation_Selector==3
 % Analyze Anisotropy for Chesapeake, VA and Auburn, AL
 % Constants
