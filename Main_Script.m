@@ -9,8 +9,8 @@ Chesapeake_Site = [36 46 06 1 76 17 13 -1];
 Auburn_Site = [32 36 17 1 85 29 12 -1];
 UT = [2004 7 1 10 0]; %Time as Year, Month, Day, Hour, Minute
 
-Site_Selector = 2; % Set to 1 for Chesapeake, Set to 2 For Corpus Christi
-Simulation_Selector = 2; %Set to 1 for 2D Simulation, 2 For 3D Simulation, 3 for Chesapeake Anisotropy, 4 for Corpus Christi Anisotropy
+Site_Selector = 1; % Set to 1 for Chesapeake, Set to 2 For Corpus Christi
+Simulation_Selector = 1; %Set to 1 for 2D Simulation, 2 For 3D Simulation, 3 for Chesapeake Anisotropy, 4 for Corpus Christi Anisotropy
 
 if Site_Selector ==1
     Source_Site = Chesapeake_Site;

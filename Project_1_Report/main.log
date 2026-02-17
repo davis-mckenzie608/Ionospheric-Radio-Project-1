@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.9)  9 FEB 2026 15:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.11)  17 FEB 2026 03:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -140,8 +140,31 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.st
-y
+)) (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen166
+\captionmargin=\dimen167
+\caption@leftmargin=\dimen168
+\caption@rightmargin=\dimen169
+\caption@width=\dimen170
+\caption@indent=\dimen171
+\caption@parindent=\dimen172
+\caption@hangindent=\dimen173
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count298
+\c@continuedfloat=\count299
+)
+(C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count300
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count301
+) (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
 \f@nch@headwidth=\skip57
@@ -177,8 +200,8 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen166
-\Gin@req@width=\dimen167
+\Gin@req@height=\dimen174
+\Gin@req@width=\dimen175
 )
 (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
@@ -200,7 +223,7 @@ Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 ) (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count298
+\etb@tempcnta=\count302
 )
 (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
@@ -209,7 +232,7 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )) (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count299
+\lrq@indent=\count303
 
 (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -221,49 +244,49 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count300
-\c@listtotal=\count301
-\c@listcount=\count302
-\c@liststart=\count303
-\c@liststop=\count304
-\c@citecount=\count305
-\c@citetotal=\count306
-\c@multicitecount=\count307
-\c@multicitetotal=\count308
-\c@instcount=\count309
-\c@maxnames=\count310
-\c@minnames=\count311
-\c@maxitems=\count312
-\c@minitems=\count313
-\c@citecounter=\count314
-\c@maxcitecounter=\count315
-\c@savedcitecounter=\count316
-\c@uniquelist=\count317
-\c@uniquename=\count318
-\c@refsection=\count319
-\c@refsegment=\count320
-\c@maxextratitle=\count321
-\c@maxextratitleyear=\count322
-\c@maxextraname=\count323
-\c@maxextradate=\count324
-\c@maxextraalpha=\count325
-\c@abbrvpenalty=\count326
-\c@highnamepenalty=\count327
-\c@lownamepenalty=\count328
-\c@maxparens=\count329
-\c@parenlevel=\count330
-\blx@tempcnta=\count331
-\blx@tempcntb=\count332
-\blx@tempcntc=\count333
-\c@blx@maxsection=\count334
-\blx@maxsegment@0=\count335
-\blx@notetype=\count336
-\blx@parenlevel@text=\count337
-\blx@parenlevel@foot=\count338
-\blx@sectionciteorder@0=\count339
-\blx@sectionciteorderinternal@0=\count340
-\blx@entrysetcounter=\count341
-\blx@biblioinstance=\count342
+\c@tabx@nest=\count304
+\c@listtotal=\count305
+\c@listcount=\count306
+\c@liststart=\count307
+\c@liststop=\count308
+\c@citecount=\count309
+\c@citetotal=\count310
+\c@multicitecount=\count311
+\c@multicitetotal=\count312
+\c@instcount=\count313
+\c@maxnames=\count314
+\c@minnames=\count315
+\c@maxitems=\count316
+\c@minitems=\count317
+\c@citecounter=\count318
+\c@maxcitecounter=\count319
+\c@savedcitecounter=\count320
+\c@uniquelist=\count321
+\c@uniquename=\count322
+\c@refsection=\count323
+\c@refsegment=\count324
+\c@maxextratitle=\count325
+\c@maxextratitleyear=\count326
+\c@maxextraname=\count327
+\c@maxextradate=\count328
+\c@maxextraalpha=\count329
+\c@abbrvpenalty=\count330
+\c@highnamepenalty=\count331
+\c@lownamepenalty=\count332
+\c@maxparens=\count333
+\c@parenlevel=\count334
+\blx@tempcnta=\count335
+\blx@tempcntb=\count336
+\blx@tempcntc=\count337
+\c@blx@maxsection=\count338
+\blx@maxsegment@0=\count339
+\blx@notetype=\count340
+\blx@parenlevel@text=\count341
+\blx@parenlevel@foot=\count342
+\blx@sectionciteorder@0=\count343
+\blx@sectionciteorderinternal@0=\count344
+\blx@entrysetcounter=\count345
+\blx@biblioinstance=\count346
 \labelnumberwidth=\skip71
 \labelalphawidth=\skip72
 \biblabelsep=\skip73
@@ -275,9 +298,9 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@bcfin=\read2
 \blx@bcfout=\write3
 \blx@langwohyphens=\language79
-\c@mincomprange=\count343
-\c@maxcomprange=\count344
-\c@mincompwidth=\count345
+\c@mincomprange=\count347
+\c@maxcomprange=\count348
+\c@mincompwidth=\count349
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -288,74 +311,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count346
-\c@savedafterword=\count347
-\c@annotator=\count348
-\c@savedannotator=\count349
-\c@author=\count350
-\c@savedauthor=\count351
-\c@bookauthor=\count352
-\c@savedbookauthor=\count353
-\c@commentator=\count354
-\c@savedcommentator=\count355
-\c@editor=\count356
-\c@savededitor=\count357
-\c@editora=\count358
-\c@savededitora=\count359
-\c@editorb=\count360
-\c@savededitorb=\count361
-\c@editorc=\count362
-\c@savededitorc=\count363
-\c@foreword=\count364
-\c@savedforeword=\count365
-\c@holder=\count366
-\c@savedholder=\count367
-\c@introduction=\count368
-\c@savedintroduction=\count369
-\c@namea=\count370
-\c@savednamea=\count371
-\c@nameb=\count372
-\c@savednameb=\count373
-\c@namec=\count374
-\c@savednamec=\count375
-\c@translator=\count376
-\c@savedtranslator=\count377
-\c@shortauthor=\count378
-\c@savedshortauthor=\count379
-\c@shorteditor=\count380
-\c@savedshorteditor=\count381
-\c@labelname=\count382
-\c@savedlabelname=\count383
-\c@institution=\count384
-\c@savedinstitution=\count385
-\c@lista=\count386
-\c@savedlista=\count387
-\c@listb=\count388
-\c@savedlistb=\count389
-\c@listc=\count390
-\c@savedlistc=\count391
-\c@listd=\count392
-\c@savedlistd=\count393
-\c@liste=\count394
-\c@savedliste=\count395
-\c@listf=\count396
-\c@savedlistf=\count397
-\c@location=\count398
-\c@savedlocation=\count399
-\c@organization=\count400
-\c@savedorganization=\count401
-\c@origlocation=\count402
-\c@savedoriglocation=\count403
-\c@origpublisher=\count404
-\c@savedorigpublisher=\count405
-\c@publisher=\count406
-\c@savedpublisher=\count407
-\c@language=\count408
-\c@savedlanguage=\count409
-\c@origlanguage=\count410
-\c@savedoriglanguage=\count411
-\c@pageref=\count412
-\c@savedpageref=\count413
+\c@afterword=\count350
+\c@savedafterword=\count351
+\c@annotator=\count352
+\c@savedannotator=\count353
+\c@author=\count354
+\c@savedauthor=\count355
+\c@bookauthor=\count356
+\c@savedbookauthor=\count357
+\c@commentator=\count358
+\c@savedcommentator=\count359
+\c@editor=\count360
+\c@savededitor=\count361
+\c@editora=\count362
+\c@savededitora=\count363
+\c@editorb=\count364
+\c@savededitorb=\count365
+\c@editorc=\count366
+\c@savededitorc=\count367
+\c@foreword=\count368
+\c@savedforeword=\count369
+\c@holder=\count370
+\c@savedholder=\count371
+\c@introduction=\count372
+\c@savedintroduction=\count373
+\c@namea=\count374
+\c@savednamea=\count375
+\c@nameb=\count376
+\c@savednameb=\count377
+\c@namec=\count378
+\c@savednamec=\count379
+\c@translator=\count380
+\c@savedtranslator=\count381
+\c@shortauthor=\count382
+\c@savedshortauthor=\count383
+\c@shorteditor=\count384
+\c@savedshorteditor=\count385
+\c@labelname=\count386
+\c@savedlabelname=\count387
+\c@institution=\count388
+\c@savedinstitution=\count389
+\c@lista=\count390
+\c@savedlista=\count391
+\c@listb=\count392
+\c@savedlistb=\count393
+\c@listc=\count394
+\c@savedlistc=\count395
+\c@listd=\count396
+\c@savedlistd=\count397
+\c@liste=\count398
+\c@savedliste=\count399
+\c@listf=\count400
+\c@savedlistf=\count401
+\c@location=\count402
+\c@savedlocation=\count403
+\c@organization=\count404
+\c@savedorganization=\count405
+\c@origlocation=\count406
+\c@savedoriglocation=\count407
+\c@origpublisher=\count408
+\c@savedorigpublisher=\count409
+\c@publisher=\count410
+\c@savedpublisher=\count411
+\c@language=\count412
+\c@savedlanguage=\count413
+\c@origlanguage=\count414
+\c@savedoriglanguage=\count415
+\c@pageref=\count416
+\c@savedpageref=\count417
 \shorthandwidth=\skip79
 \shortjournalwidth=\skip80
 \shortserieswidth=\skip81
@@ -380,19 +403,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count414
-\c@textcitetotal=\count415
-\c@textcitemaxnames=\count416
-\c@biburlbigbreakpenalty=\count417
-\c@biburlbreakpenalty=\count418
-\c@biburlnumpenalty=\count419
-\c@biburlucpenalty=\count420
-\c@biburllcpenalty=\count421
+\c@textcitecount=\count418
+\c@textcitetotal=\count419
+\c@textcitemaxnames=\count420
+\c@biburlbigbreakpenalty=\count421
+\c@biburlbreakpenalty=\count422
+\c@biburlnumpenalty=\count423
+\c@biburlucpenalty=\count424
+\c@biburllcpenalty=\count425
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count422
+\c@smartand=\count426
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -417,8 +440,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.b
 bx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count423
-\c@bbx:relatedtotal=\count424
+\c@bbx:relatedcount=\count427
+\c@bbx:relatedtotal=\count428
 ))))
 Package biblatex Info: Trying to load citation style 'ieee'...
 Package biblatex Info: ... file 'ieee.cbx' found.
@@ -457,7 +480,7 @@ Package: expl3 2026-01-19 L3 programming layer (loader)
 (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count425
+\l__color_backend_stack_int=\count429
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2026-01-19 L3 programming layer (loader) 
@@ -472,38 +495,25 @@ Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 ))
-\@quotelevel=\count426
-\@quotereset=\count427
- (main.aux
-
-LaTeX Warning: Label `fig:myPhoto1' multiply defined.
-
-
-LaTeX Warning: Label `fig:myPhoto1' multiply defined.
-
-
-LaTeX Warning: Label `fig:myPhoto1' multiply defined.
-
-
-LaTeX Warning: Label `fig:myPhoto1' multiply defined.
-
-)
+\@quotelevel=\count430
+\@quotereset=\count431
+ (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -539,20 +549,22 @@ LaTeX Font Info:    ... okay on input line 36.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 
 (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count428
-\scratchdimen=\dimen168
+\scratchcounter=\count432
+\scratchdimen=\dimen176
 \scratchbox=\box55
-\nofMPsegments=\count429
-\nofMParguments=\count430
+\nofMPsegments=\count433
+\nofMParguments=\count434
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count431
-\MPscratchDim=\dimen169
-\MPnumerator=\count432
-\makeMPintoPDFobject=\count433
+\MPscratchCnt=\count435
+\MPscratchDim=\dimen177
+\MPnumerator=\count436
+\makeMPintoPDFobject=\count437
 \everyMPtoPDFconversion=\toks32
 )
 (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -580,27 +592,27 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 36.
-Package biblatex Info: Reference segment=0 on input line 36.
+Package biblatex Info: Reference section=0 on input line 38.
+Package biblatex Info: Reference segment=0 on input line 38.
 
 
 Package fancyhdr Warning: \fancyhf's `E' option without twoside option is usele
 ss.
 (fancyhdr)                Please consider using the `twoside' option on input l
-ine 39.
+ine 41.
 
 
 Package fancyhdr Warning: \fancyhf's `E' option without twoside option is usele
 ss.
 (fancyhdr)                Please consider using the `twoside' option on input l
-ine 40.
+ine 42.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
 
 (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
 
 
 (C:\Users\davis\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -612,10 +624,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <img/Raytrace_ex.png, id=7, 1200.1638pt x 289.5618pt>
 File: img/Raytrace_ex.png Graphic file (type png)
 <use img/Raytrace_ex.png>
-Package pdftex.def Info: img/Raytrace_ex.png  used on input line 74.
+Package pdftex.def Info: img/Raytrace_ex.png  used on input line 77.
 (pdftex.def)             Requested size: 469.75499pt x 113.33513pt.
 
-Overfull \hbox (2.66907pt too wide) in paragraph at lines 79--80
+Overfull \hbox (2.66907pt too wide) in paragraph at lines 82--83
 \OT1/cmr/m/n/12 ing and dis-tance be-tween two co-or-di-nate points and Earth w
 as cre-ated, [][]\OT1/cmtt/m/n/12 Bearing_Calculator[]\OT1/cmr/m/n/12 .
  []
@@ -628,7 +640,74 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [2 <./img/Raytrace_ex.png (PNG copy)>]
-Overfull \hbox (0.6727pt too wide) in paragraph at lines 89--89
+<img/electronnumber-grid.png, id=13, 460.6008pt x 485.1726pt>
+File: img/electronnumber-grid.png Graphic file (type png)
+<use img/electronnumber-grid.png>
+Package pdftex.def Info: img/electronnumber-grid.png  used on input line 89.
+(pdftex.def)             Requested size: 216.81pt x 228.3791pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[3 <./img/electronnumber-grid.png (PNG copy)>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[4]
+<img/ionogram-chspk-2d.png, id=26, 440.3652pt x 485.1726pt>
+File: img/ionogram-chspk-2d.png Graphic file (type png)
+<use img/ionogram-chspk-2d.png>
+Package pdftex.def Info: img/ionogram-chspk-2d.png  used on input line 148.
+(pdftex.def)             Requested size: 211.3883pt x 232.895pt.
+<img/ionogram-crpchr-2d.png, id=27, 440.3652pt x 485.1726pt>
+File: img/ionogram-crpchr-2d.png Graphic file (type png)
+<use img/ionogram-crpchr-2d.png>
+Package pdftex.def Info: img/ionogram-crpchr-2d.png  used on input line 154.
+(pdftex.def)             Requested size: 211.3883pt x 232.895pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5]
+<img/map-chspk-2d.png, id=31, 485.1726pt x 479.391pt>
+File: img/map-chspk-2d.png Graphic file (type png)
+<use img/map-chspk-2d.png>
+Package pdftex.def Info: img/map-chspk-2d.png  used on input line 171.
+(pdftex.def)             Requested size: 211.3883pt x 208.86989pt.
+<img/map-crpchr-2d.png, id=32, 488.0634pt x 479.391pt>
+File: img/map-crpchr-2d.png Graphic file (type png)
+<use img/map-crpchr-2d.png>
+Package pdftex.def Info: img/map-crpchr-2d.png  used on input line 177.
+(pdftex.def)             Requested size: 211.3883pt x 207.63367pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6 <./img/ionogram-chspk-2d.png (PNG copy)> <./img/ionogram-crpchr-2d.png (PNG 
+copy)>]
+Overfull \hbox (0.6727pt too wide) in paragraph at lines 184--184
 []\OT1/cmr/bx/n/17.28 Three-Dimensional Ray Trac-ing Im-ple-men-ta-tion and
  []
 
@@ -639,36 +718,131 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[3] (main.aux)
+[7 <./img/map-chspk-2d.png (PNG copy)> <./img/map-crpchr-2d.png (PNG copy)>]
+<img/ionogram-chspk-apogee-3d.png, id=40, 440.3652pt x 485.1726pt>
+File: img/ionogram-chspk-apogee-3d.png Graphic file (type png)
+<use img/ionogram-chspk-apogee-3d.png>
+Package pdftex.def Info: img/ionogram-chspk-apogee-3d.png  used on input line 2
+09.
+(pdftex.def)             Requested size: 211.3883pt x 232.895pt.
+<img/ionogram-crpchr-apogee-3d.png, id=41, 440.3652pt x 485.1726pt>
+File: img/ionogram-crpchr-apogee-3d.png Graphic file (type png)
+<use img/ionogram-crpchr-apogee-3d.png>
+Package pdftex.def Info: img/ionogram-crpchr-apogee-3d.png  used on input line 
+215.
+(pdftex.def)             Requested size: 211.3883pt x 232.895pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img/ionogram-chspk-geopath-3d.png, id=42, 440.3652pt x 486.618pt>
+File: img/ionogram-chspk-geopath-3d.png Graphic file (type png)
+<use img/ionogram-chspk-geopath-3d.png>
+Package pdftex.def Info: img/ionogram-chspk-geopath-3d.png  used on input line 
+227.
+(pdftex.def)             Requested size: 211.3883pt x 233.58884pt.
+<img/ionogram-crpchr-geopath-3d.png, id=43, 440.3652pt x 486.618pt>
+File: img/ionogram-crpchr-geopath-3d.png Graphic file (type png)
+<use img/ionogram-crpchr-geopath-3d.png>
+Package pdftex.def Info: img/ionogram-crpchr-geopath-3d.png  used on input line
+ 233.
+(pdftex.def)             Requested size: 211.3883pt x 233.58884pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[8]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[9 <./img/ionogram-chspk-apogee-3d.png (PNG copy)> <./img/ionogram-crpchr-apoge
+e-3d.png (PNG copy)> <./img/ionogram-chspk-geopath-3d.png (PNG copy)> <./img/io
+nogram-crpchr-geopath-3d.png (PNG copy)>]
+<img/map-chspk-3d.png, id=50, 475.5366pt x 479.391pt>
+File: img/map-chspk-3d.png Graphic file (type png)
+<use img/map-chspk-3d.png>
+Package pdftex.def Info: img/map-chspk-3d.png  used on input line 246.
+(pdftex.def)             Requested size: 211.3883pt x 213.0979pt.
+<img/map-crpchr-3d.png, id=51, 488.0634pt x 479.391pt>
+File: img/map-crpchr-3d.png Graphic file (type png)
+<use img/map-crpchr-3d.png>
+Package pdftex.def Info: img/map-crpchr-3d.png  used on input line 252.
+(pdftex.def)             Requested size: 211.3883pt x 207.63367pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10 <./img/map-chspk-3d.png (PNG copy)> <./img/map-crpchr-3d.png (PNG copy)>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11827 strings out of 467866
- 218251 string characters out of 5418326
- 1053958 words of memory out of 5000000
- 40598 multiletter control sequences out of 15000+600000
- 636693 words of font info for 75 fonts, out of 8000000 for 9000
+ 13374 strings out of 467866
+ 249311 string characters out of 5418325
+ 1074977 words of memory out of 5000000
+ 42136 multiletter control sequences out of 15000+600000
+ 637336 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,11n,66p,899b,1321s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 63i,12n,66p,1198b,1273s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr12.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr17.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmti12.pfb><C:/Users/davis/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (3 pages, 418078 bytes).
+fonts/cm/cmex10.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi12.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/davis/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/davis/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/davis/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/davis/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
+davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C
+:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti
+12.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmtt12.pfb>
+Output written on main.pdf (13 pages, 3206460 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
+ 112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
