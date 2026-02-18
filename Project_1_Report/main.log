@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.9)  17 FEB 2026 18:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.11)  17 FEB 2026 21:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,61 +621,54 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {C:/Users/davis/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<img/Raytrace_ex.png, id=7, 1200.1638pt x 289.5618pt>
+<img/system-map.png, id=9, 863.3856pt x 572.3784pt>
+File: img/system-map.png Graphic file (type png)
+<use img/system-map.png>
+Package pdftex.def Info: img/system-map.png  used on input line 81.
+(pdftex.def)             Requested size: 469.75499pt x 311.42038pt.
+<img/Raytrace_ex.png, id=10, 1200.1638pt x 289.5618pt>
 File: img/Raytrace_ex.png Graphic file (type png)
 <use img/Raytrace_ex.png>
-Package pdftex.def Info: img/Raytrace_ex.png  used on input line 77.
+Package pdftex.def Info: img/Raytrace_ex.png  used on input line 90.
 (pdftex.def)             Requested size: 469.75499pt x 113.33513pt.
 
-Overfull \hbox (2.66907pt too wide) in paragraph at lines 82--83
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[2 <./img/system-map.png (PNG copy)>]
+Overfull \hbox (2.66907pt too wide) in paragraph at lines 95--96
 \OT1/cmr/m/n/12 ing and dis-tance be-tween two co-or-di-nate points and Earth w
 as cre-ated, [][]\OT1/cmtt/m/n/12 Bearing_Calculator[]\OT1/cmr/m/n/12 .
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[2 <./img/Raytrace_ex.png (PNG copy)>]
-<img/electronnumber-grid.png, id=13, 460.6008pt x 485.1726pt>
+<img/electronnumber-grid.png, id=15, 460.6008pt x 485.1726pt>
 File: img/electronnumber-grid.png Graphic file (type png)
 <use img/electronnumber-grid.png>
-Package pdftex.def Info: img/electronnumber-grid.png  used on input line 89.
+Package pdftex.def Info: img/electronnumber-grid.png  used on input line 102.
 (pdftex.def)             Requested size: 216.81pt x 228.3791pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[3 <./img/electronnumber-grid.png (PNG copy)>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[4]
-<img/ionogram-chspk-2d.png, id=26, 440.3652pt x 485.1726pt>
-File: img/ionogram-chspk-2d.png Graphic file (type png)
-<use img/ionogram-chspk-2d.png>
-Package pdftex.def Info: img/ionogram-chspk-2d.png  used on input line 148.
-(pdftex.def)             Requested size: 211.3883pt x 232.895pt.
-<img/ionogram-crpchr-2d.png, id=27, 440.3652pt x 485.1726pt>
-File: img/ionogram-crpchr-2d.png Graphic file (type png)
-<use img/ionogram-crpchr-2d.png>
-Package pdftex.def Info: img/ionogram-crpchr-2d.png  used on input line 154.
-(pdftex.def)             Requested size: 211.3883pt x 232.895pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[3 <./img/Raytrace_ex.png (PNG copy)>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[4 <./img/electronnumber-grid.png (PNG copy)>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -684,19 +677,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5]
-<img/map-chspk-2d.png, id=31, 485.1726pt x 479.391pt>
-File: img/map-chspk-2d.png Graphic file (type png)
-<use img/map-chspk-2d.png>
-Package pdftex.def Info: img/map-chspk-2d.png  used on input line 171.
-(pdftex.def)             Requested size: 211.3883pt x 208.86989pt.
-<img/map-crpchr-2d.png, id=32, 488.0634pt x 479.391pt>
-File: img/map-crpchr-2d.png Graphic file (type png)
-<use img/map-crpchr-2d.png>
-Package pdftex.def Info: img/map-crpchr-2d.png  used on input line 177.
-(pdftex.def)             Requested size: 211.3883pt x 207.63367pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<img/ionogram-chspk-2d.png, id=31, 440.3652pt x 485.1726pt>
+File: img/ionogram-chspk-2d.png Graphic file (type png)
+<use img/ionogram-chspk-2d.png>
+Package pdftex.def Info: img/ionogram-chspk-2d.png  used on input line 161.
+(pdftex.def)             Requested size: 211.3883pt x 232.895pt.
+<img/ionogram-crpchr-2d.png, id=32, 440.3652pt x 485.1726pt>
+File: img/ionogram-crpchr-2d.png Graphic file (type png)
+<use img/ionogram-crpchr-2d.png>
+Package pdftex.def Info: img/ionogram-crpchr-2d.png  used on input line 167.
+(pdftex.def)             Requested size: 211.3883pt x 232.895pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -707,7 +697,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6 <./img/ionogram-chspk-2d.png (PNG copy)> <./img/ionogram-crpchr-2d.png (PNG 
 copy)>]
-Overfull \hbox (0.6727pt too wide) in paragraph at lines 184--184
+<img/map-chspk-2d.png, id=36, 485.1726pt x 479.391pt>
+File: img/map-chspk-2d.png Graphic file (type png)
+<use img/map-chspk-2d.png>
+Package pdftex.def Info: img/map-chspk-2d.png  used on input line 184.
+(pdftex.def)             Requested size: 211.3883pt x 208.86989pt.
+<img/map-crpchr-2d.png, id=37, 488.0634pt x 479.391pt>
+File: img/map-crpchr-2d.png Graphic file (type png)
+<use img/map-crpchr-2d.png>
+Package pdftex.def Info: img/map-crpchr-2d.png  used on input line 190.
+(pdftex.def)             Requested size: 211.3883pt x 207.63367pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7 <./img/map-chspk-2d.png (PNG copy)> <./img/map-crpchr-2d.png (PNG copy)>]
+Overfull \hbox (0.6727pt too wide) in paragraph at lines 197--197
 []\OT1/cmr/bx/n/17.28 Three-Dimensional Ray Trac-ing Im-ple-men-ta-tion and
  []
 
@@ -718,46 +727,39 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7 <./img/map-chspk-2d.png (PNG copy)> <./img/map-crpchr-2d.png (PNG copy)>]
-<img/ionogram-chspk-apogee-3d.png, id=40, 440.3652pt x 485.1726pt>
+[8]
+<img/ionogram-chspk-apogee-3d.png, id=45, 440.3652pt x 485.1726pt>
 File: img/ionogram-chspk-apogee-3d.png Graphic file (type png)
 <use img/ionogram-chspk-apogee-3d.png>
 Package pdftex.def Info: img/ionogram-chspk-apogee-3d.png  used on input line 2
-09.
+22.
 (pdftex.def)             Requested size: 211.3883pt x 232.895pt.
-<img/ionogram-crpchr-apogee-3d.png, id=41, 440.3652pt x 485.1726pt>
+<img/ionogram-crpchr-apogee-3d.png, id=46, 440.3652pt x 485.1726pt>
 File: img/ionogram-crpchr-apogee-3d.png Graphic file (type png)
 <use img/ionogram-crpchr-apogee-3d.png>
 Package pdftex.def Info: img/ionogram-crpchr-apogee-3d.png  used on input line 
-215.
+228.
 (pdftex.def)             Requested size: 211.3883pt x 232.895pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/ionogram-chspk-geopath-3d.png, id=42, 440.3652pt x 486.618pt>
+<img/ionogram-chspk-geopath-3d.png, id=47, 440.3652pt x 486.618pt>
 File: img/ionogram-chspk-geopath-3d.png Graphic file (type png)
 <use img/ionogram-chspk-geopath-3d.png>
 Package pdftex.def Info: img/ionogram-chspk-geopath-3d.png  used on input line 
-227.
+240.
 (pdftex.def)             Requested size: 211.3883pt x 233.58884pt.
-<img/ionogram-crpchr-geopath-3d.png, id=43, 440.3652pt x 486.618pt>
+
+Underfull \hbox (badness 1028) in paragraph at lines 241--241
+[]\OT1/cmr/m/n/12 Figure 10: |Ge-o-met-ric Path Iono-gram for
+ []
+
+<img/ionogram-crpchr-geopath-3d.png, id=48, 440.3652pt x 486.618pt>
 File: img/ionogram-crpchr-geopath-3d.png Graphic file (type png)
 <use img/ionogram-crpchr-geopath-3d.png>
 Package pdftex.def Info: img/ionogram-crpchr-geopath-3d.png  used on input line
- 233.
+ 246.
 (pdftex.def)             Requested size: 211.3883pt x 233.58884pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[8]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -766,37 +768,43 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [9 <./img/ionogram-chspk-apogee-3d.png (PNG copy)> <./img/ionogram-crpchr-apoge
-e-3d.png (PNG copy)> <./img/ionogram-chspk-geopath-3d.png (PNG copy)> <./img/io
-nogram-crpchr-geopath-3d.png (PNG copy)>]
-<img/map-chspk-3d.png, id=50, 475.5366pt x 479.391pt>
+e-3d.png (PNG copy)>]
+<img/map-chspk-3d.png, id=52, 475.5366pt x 479.391pt>
 File: img/map-chspk-3d.png Graphic file (type png)
 <use img/map-chspk-3d.png>
-Package pdftex.def Info: img/map-chspk-3d.png  used on input line 246.
+Package pdftex.def Info: img/map-chspk-3d.png  used on input line 259.
 (pdftex.def)             Requested size: 211.3883pt x 213.0979pt.
-<img/map-crpchr-3d.png, id=51, 488.0634pt x 479.391pt>
+<img/map-crpchr-3d.png, id=53, 488.0634pt x 479.391pt>
 File: img/map-crpchr-3d.png Graphic file (type png)
 <use img/map-crpchr-3d.png>
-Package pdftex.def Info: img/map-crpchr-3d.png  used on input line 252.
+Package pdftex.def Info: img/map-crpchr-3d.png  used on input line 265.
 (pdftex.def)             Requested size: 211.3883pt x 207.63367pt.
 
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10 <./img/map-chspk-3d.png (PNG copy)> <./img/map-crpchr-3d.png (PNG copy)>]
-<img/ani-chspk-o.png, id=55, 440.3652pt x 485.1726pt>
+[10 <./img/ionogram-chspk-geopath-3d.png (PNG copy)> <./img/ionogram-crpchr-geo
+path-3d.png (PNG copy)>]
+<img/ani-chspk-o.png, id=57, 440.3652pt x 485.1726pt>
 File: img/ani-chspk-o.png Graphic file (type png)
 <use img/ani-chspk-o.png>
-Package pdftex.def Info: img/ani-chspk-o.png  used on input line 275.
+Package pdftex.def Info: img/ani-chspk-o.png  used on input line 288.
 (pdftex.def)             Requested size: 211.3883pt x 232.895pt.
-<img/ani-chspk-x.png, id=56, 440.3652pt x 485.1726pt>
+<img/ani-chspk-x.png, id=58, 440.3652pt x 485.1726pt>
 File: img/ani-chspk-x.png Graphic file (type png)
 <use img/ani-chspk-x.png>
-Package pdftex.def Info: img/ani-chspk-x.png  used on input line 281.
+Package pdftex.def Info: img/ani-chspk-x.png  used on input line 294.
 (pdftex.def)             Requested size: 211.3883pt x 232.895pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -805,26 +813,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11 <./img/ani-chspk-o.png (PNG copy)> <./img/ani-chspk-x.png (PNG copy)>]
-<img/ani-crpchr-o.png, id=60, 446.1468pt x 485.1726pt>
+[11 <./img/map-chspk-3d.png (PNG copy)> <./img/map-crpchr-3d.png (PNG copy)>]
+<img/ani-crpchr-o.png, id=62, 446.1468pt x 485.1726pt>
 File: img/ani-crpchr-o.png Graphic file (type png)
 <use img/ani-crpchr-o.png>
-Package pdftex.def Info: img/ani-crpchr-o.png  used on input line 296.
+Package pdftex.def Info: img/ani-crpchr-o.png  used on input line 309.
 (pdftex.def)             Requested size: 211.3883pt x 229.87453pt.
-<img/ani-crpchr-x.png, id=61, 443.7378pt x 485.1726pt>
+<img/ani-crpchr-x.png, id=63, 443.7378pt x 485.1726pt>
 File: img/ani-crpchr-x.png Graphic file (type png)
 <use img/ani-crpchr-x.png>
-Package pdftex.def Info: img/ani-crpchr-x.png  used on input line 302.
+Package pdftex.def Info: img/ani-crpchr-x.png  used on input line 315.
 (pdftex.def)             Requested size: 211.3883pt x 231.12566pt.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <./img/ani-crpchr-o.png (PNG copy)> <./img/ani-crpchr-x.png (PNG copy)>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -832,7 +835,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13]
+[12 <./img/ani-chspk-o.png (PNG copy)> <./img/ani-chspk-x.png (PNG copy)>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13 <./img/ani-crpchr-o.png (PNG copy)> <./img/ani-crpchr-x.png (PNG copy)>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -850,30 +861,31 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13411 strings out of 467866
- 250213 string characters out of 5418326
- 1075077 words of memory out of 5000000
- 42172 multiletter control sequences out of 15000+600000
- 637673 words of font info for 79 fonts, out of 8000000 for 9000
+ 13426 strings out of 467866
+ 250568 string characters out of 5418325
+ 1074183 words of memory out of 5000000
+ 42186 multiletter control sequences out of 15000+600000
+ 637974 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,66p,1198b,1271s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 63i,11n,66p,1198b,1339s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\davis\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmmi12.pfb><C:/Users/davis/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/davis/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/davis/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/davis/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dav
-is/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
-Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.
-pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmti12.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmtt12.pfb>
-Output written on main.pdf (14 pages, 3622408 bytes).
+ic/amsfonts/cm/cmcsc10.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmex10.pfb><C:/Users/davis/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/davis/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/davis/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/davis/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/
+davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
+/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmti12.pfb><C:/Users/davis/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (14 pages, 4506284 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
+ 130 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
