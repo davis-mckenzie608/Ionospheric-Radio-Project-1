@@ -266,18 +266,46 @@ style=ieee,
 	For the Corpus Christi--Auburn analysis (\verb*|Simulation_Selector = 4|), an identical procedure is followed. The maximum distance error tolerance is set to 100~km for all anisotropy simulations, as reducing the constraint caused no measurable change in results.
 	
 	\subsection{Results: Chesapeake $\leftrightarrow$ Auburn}
-	The anisotropy analysis for the Chesapeake--Auburn path produces two comparison plots. The first compares the calculated X-mode reflection height (derived from the geometric path) for the Chesapeake-to-Auburn direction against the Auburn-to-Chesapeake direction. The second plot provides the same comparison for the O-mode.
+	The anisotropy analysis for the Chesapeake--Auburn path produces two comparison plots. Figure 13 shows the calculated O-mode reflection height (derived from the geometric path) for the Chesapeake-to-Auburn direction against the Auburn-to-Chesapeake direction. Figure 14 provides the same comparison for X-mode.
 	
-	%Put aniso figures here
+	\begin{figure}[h!]
+		\centering
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\includegraphics[width=.9\linewidth]{img/ani-chspk-o.png}
+			\captionof{figure}{Forward and Reverse Characteristics For Chesapeake $\leftrightarrow$ Auburn, O-Mode}
+			\label{fig:ani-chspk-o}
+		\end{minipage}%
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\includegraphics[width=.9\linewidth]{img/ani-chspk-x.png}
+			\captionof{figure}{Forward and Reverse Characteristics For Chesapeake $\leftrightarrow$ Auburn, X-Mode}
+			\label{fig:ani-chspk-x}
+		\end{minipage}
+	\end{figure}
 	
-	If the ionosphere were isotropic (or if the geomagnetic field had no effect), the forward and reverse traces would produce identical virtual height profiles. Any deviation between the two traces is therefore a direct indicator of the anisotropic influence of the geomagnetic field. The X-mode is expected to show greater sensitivity to direction reversal than the O-mode because the extraordinary wave's refractive index depends more strongly on the angle between the wave vector and the magnetic field. The magnitude and frequency-dependence of the observed differences provide insight into the strength and geometry of the geomagnetic field along the propagation path.
+	A matching of reflection height profiles for each mode would indicate isotropy along the path traced. Any deviation between the two traces is therefore a direct indicator of the anisotropic influence of the geomagnetic field. Both modes show isotropy across most of the frequency range with deviations at both extremes of the tested range. This could indicate that the geomagnetic field was not particularly strong in the portions of the ionosphere that the rays passed through, as the B-field matrix was populated with appropriate values for each direction before the simulated began.
 	
 	\subsection{Results: Corpus Christi $\leftrightarrow$ Auburn}
-	The same analysis is performed for the Corpus Christi--Auburn path. Because this path has a different orientation relative to the geomagnetic field (running roughly east-west compared to the more northeast-southwest Chesapeake--Auburn path), the anisotropy signature is expected to differ.
+	The same analysis was performed for the Corpus Christi--Auburn path, shown below in Figures 15 and 16. Because this path has a different orientation relative to the geomagnetic field (running roughly east-west compared to the more northeast-southwest Chesapeake--Auburn path), the anisotropic effects should appear different.
 	
-	%Put aniso figures here
+	\begin{figure}[h!]
+		\centering
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\includegraphics[width=.9\linewidth]{img/ani-crpchr-o.png}
+			\captionof{figure}{Forward and Reverse Characteristics For Corpus Christi $\leftrightarrow$ Auburn, O-Mode}
+			\label{fig:ani-crpchr-o}
+		\end{minipage}%
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\includegraphics[width=.9\linewidth]{img/ani-crpchr-x.png}
+			\captionof{figure}{Forward and Reverse Characteristics For Corpus Christi $\leftrightarrow$ Auburn, X-Mode}
+			\label{fig:ani-crpchr-x}
+		\end{minipage}
+	\end{figure}
 	
-	Comparing the results from the two paths allows for a qualitative assessment of how path geometry relative to the geomagnetic field influences the degree of observed anisotropy. Paths that are more closely aligned with the magnetic field direction may exhibit less anisotropy than paths that are more perpendicular to it. This analysis demonstrates that the assumption of reciprocity, which is implicit in the 2D ray tracing model and in many simplified treatments of HF propagation, does not strictly hold in the real ionosphere.
+	Again, little anisotropy was observed. Further analysis of different locations and time should be conducted to understand how anisotropy might be best displayed and modeled in PHaRLAP.
 	
 	\section{Further Uses of PHaRLAP and Ray Tracing}
 	The work presented in this report represents a subset of the analyses that can be performed using the PHaRLAP ray tracing toolbox. Several additional capabilities and extensions are worth noting.
@@ -293,4 +321,23 @@ style=ieee,
 	The methodology developed in this project could be applied to real-time data from operational ionosondes and HF radar systems. By comparing observed oblique ionograms with ray-traced synthetic ionograms, discrepancies between the model and reality can be identified, potentially revealing the presence of ionospheric irregularities, traveling ionospheric disturbances, or space weather effects that are not captured by the background ionospheric model.
 	
 	\printbibliography
+	
+	\section*{Acknowledgments}
+	The results shown in this paper were obtained using the HF propagation
+	toolbox, PHaRLAP, created by Dr Manuel Cervera, Defence Science and Technology
+	Group, Australia (manuel.cervera@dsto.defence.gov.au). This toolbox is 
+	available by request from its author.\\
+	The Author acknowledges the use of the International Reference Ionosphere (2020) in the production of this document.\\
+	The Author acknowledges the use of The International Telecommunications Union Recommendation ITU-R P.372-10 for radio noise in the production of this document
+	
+	\section*{Appendix: Assumptions and Constants}
+	\begin{itemize}
+		\item Date: July 7th, 2004
+		\item Time: 10:00:00 UTC
+		\item R12: 64.8
+		\item Auburn, AL Coordinates:
+		\item Chesapeake, VA Coordinates:
+		\item Corpus Christi, TX Coordinates:
+	\end{itemize}
+	
 \end{document}
